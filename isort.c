@@ -10,10 +10,14 @@ int main(int argc, char* argv[])
 {
     //printf("In main.\n");
     int array_len;
-    if (!argc)
+    if (argc == 1)
     {
         printf("\nNo inputer parameters detected. Enter array length:\n");
-        while (!(scanf("length: %d", &array_len)==1));
+        while (scanf("%d", &array_len)==0);
     }
-    array_len = argc;
+    else
+    {
+        array_len = argc;
+    }
+    printf("%d",array_len);
 }
